@@ -1,0 +1,40 @@
+package com.example;
+
+public class Calculator {
+    public int add(int a, int b) {
+        return a + b;
+    }
+
+    public int subtract(int a, int b) {
+        return a - b;
+    }
+
+    public int multiply(int a, int b) {
+        return a * b;
+    }
+
+    public double divide(int a, int b) {
+        if (b != 0) {
+            return (double) a / b;
+        } else {
+            throw new ArithmeticException("Division by zero is not allowed");
+        }
+    }
+}
+package com.example;
+
+public class Main {
+    public static void main(String[] args) {
+        Calculator calculator = new Calculator();
+
+        int sum = calculator.add(5, 3);
+        int difference = calculator.subtract(5, 3);
+        int product = calculator.multiply(5, 3);
+        double quotient = calculator.divide(5, 3);
+
+        System.out.println("Sum: " + sum);
+        System.out.println("Difference: " + difference);
+        System.out.println("Product: " + product);
+        System.out.println("Quotient: " + quotient);
+    }
+}
